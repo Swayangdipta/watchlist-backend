@@ -11,7 +11,6 @@ const contentRoutes = require('./routes/content')
 const userRoutes = require('./routes/user')
 
 // Database connection
-console.log(process.env.DB_URI);
 mongoose.connect(process.env.DB_URI,{useNewUrlParser: true,useUnifiedTopology: true})
 .then(res=> console.log("DB Connected"))
 .catch(err=>console.log("DATABASE CONNECTION FAILD: ",err));
